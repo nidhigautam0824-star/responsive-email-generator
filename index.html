@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Engine Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+    <h2>Email & Invoice Engine</h2>
+    
+    <div class="form-section">
+        <div class="input-box">
+            <label>User Name</label>
+            <input type="text" id="userName" placeholder="e.g. Nidhi Gautam">
+        </div>
+        <div class="input-box">
+            <label>Data (Amount/OTP)</label>
+            <input type="text" id="mainData" placeholder="e.g. 1500 or 8821">
+        </div>
+    </div>
+
+    <div class="btn-group">
+        <button class="btn-invoice" onclick="buildEmail('invoice')">Generate Invoice</button>
+        <button class="btn-otp" onclick="buildEmail('otp')">Generate OTP</button>
+    </div>
+
+    <div id="resultArea" style="display:none;">
+        <label>Copy HTML Code:</label>
+        <textarea id="outputCode" readonly></textarea>
+        
+        <p class="preview-label">Live Email Preview:</p>
+        <div id="previewContainer"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
